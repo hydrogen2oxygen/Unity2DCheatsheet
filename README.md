@@ -6,7 +6,21 @@ I will rewrite it for my own games.
 ## Rotate the camera with the player
 Position the camera inside the player hierarchy. Simple as that. Then it rotates with the player.
 
+## SpaceShip / Airplane movement
+### Basic version
+        // add or subtract the vertical force
+        rigidBody2D.AddForce(transform.up * Input.GetAxis("Vertical") * speedmultiplier);
 
+        // rotate the ship / airplane
+        float rotation = Input.GetAxis("Horizontal") * rotationSpeed;
+        rotation *= Time.deltaTime;
+        transform.Rotate(0, 0, -rotation);
+
+        // limit the velocity (typical for arcade games)
+        rigidBody2D.velocity = Vector3.ClampMagnitude(rigidBody2D.velocity, maxSpeed);
+
+### Air resistance
+Increase the "Linear Drag" inside the Rigidbody 2D.
 
 [Animation](animation.md)
 
