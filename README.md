@@ -1,6 +1,13 @@
 # Unity2DCheatsheet
 A cheatsheet for Unity's 2D features. It's based on [this cheat sheet](http://cdn1.raywenderlich.com/wp-content/uploads/2014/11/UnityCheatsheet-0_1.pdf) but I've modified it for 2D.
 
+I will rewrite it for my own games.
+
+## Rotate the camera with the player
+Position the camera inside the player hierarchy. Simple as that. Then it rotates with the player.
+
+
+
 [Animation](animation.md)
 
 ## Non-physics movement
